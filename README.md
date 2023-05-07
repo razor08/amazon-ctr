@@ -58,14 +58,14 @@ The inference logic looks something like below:
 def predict():
     try:
         print(request.json)
-        # Tokenize the input text and convert to PyTorch tensor
-        sentences1 = request.json['text']
-        embedding1 = model.encode(sentences1)
-        embedding2 = model.encode(sentences2)
-        score = util.cos_sim(embedding1, embedding2).tolist()[0]
-
+        
         # Generate model outputs
         with torch.no_grad():
+            # Tokenize the input text and convert to PyTorch tensor
+            sentences1 = request.json['text']
+            embedding1 = model.encode(sentences1)
+            embedding2 = model.encode(sentences2)
+            score = util.cos_sim(embedding1, embedding2).tolist()[0]
             predicted = targets[np.argmax(score)]
 
         # Extract the model output and return as JSON
