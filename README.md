@@ -32,7 +32,7 @@ Training Approach: Training Bi-Encoders with in-batch hard negatives (giving a s
 
 So, I experimented by using a [ContrastiveLoss](https://www.sbert.net/docs/package_reference/losses.html?highlight=contrastive#contrastiveloss) and [OnlineContrastiveLoss](https://www.sbert.net/docs/package_reference/losses.html?highlight=contrastive#onlinecontrastiveloss) provided by the Sentence Transformer library. Out of the two, OnlineContrastive Loss gave the best performance. Online Contrastive Loss selects hard positives and hard negatives in order to update the loss function values which would justify achieving a higher performance. 
 
-I also tried out two validation set evaluators: [Embedding Similarity Evaluator](https://www.sbert.net/docs/package_reference/evaluation.html#sentence_transformers.evaluation.EmbeddingSimilarityEvaluator) and [Binary Classification Evaluator](https://www.sbert.net/docs/package_reference/evaluation.html#sentence_transformers.evaluation.BinaryClassificationEvaluator); out of which Embedding Similarity Evaluator. 
+I also tried out two validation set evaluators: [Embedding Similarity Evaluator](https://www.sbert.net/docs/package_reference/evaluation.html#sentence_transformers.evaluation.EmbeddingSimilarityEvaluator) and [Binary Classification Evaluator](https://www.sbert.net/docs/package_reference/evaluation.html#sentence_transformers.evaluation.BinaryClassificationEvaluator); out of which Embedding Similarity Evaluator gave the best performance. 
 
 Hyperparameter Search: I ran experiments by varying values of following parameters on the given ranges: 
 1. Batch Size: [64, 128, 256] | Best Value: 64
