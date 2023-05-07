@@ -1,0 +1,9 @@
+[Unit]
+Description=Autoscale Flask project
+After=network.target
+[Service]
+User=ubuntu
+Group=www-data
+ExecStart=/usr/bin/python3 /home/ubuntu/app.py
+[Install]
+WantedBy=multi-user.target
