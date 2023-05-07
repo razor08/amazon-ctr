@@ -58,10 +58,9 @@ The inference logic looks something like below:
 def predict():
     try:
         print(request.json)
-        
+
         # Generate model outputs
         with torch.no_grad():
-            # Tokenize the input text and convert to PyTorch tensor
             sentences1 = request.json['text']
             embedding1 = model.encode(sentences1)
             embedding2 = model.encode(sentences2)
