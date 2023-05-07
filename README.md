@@ -189,7 +189,7 @@ Now, we are ready to deploy this as a scalable EC2 service on a Elastic Load Bal
 ![Image Creation](/images/image_creation.png)
 2. Next, we will create a Launch Template configuration using the above AMI Image. 
     
-    a. Click on Launch Templates in the left hand bar and click on Create Launch Template. Assign the AMI a name. 
+    a. Click on Launch Templates in the left hand bar and click on Create Launch Template. Assign the Template a name. 
         ![Create Launch Template](/images/launch-template-1.png)
 
     b. Scroll down and select the AMI you created in the above step. 
